@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  background-color: #474F59;
+  margin: 0;
+}
+
+#quote-box {
+  background-color: #0A0B0D;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgb(128, 242, 157);
+}
+
+#text,#author {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#text {
+  font-size: 1.6em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#author {
+  text-align: right;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button,
+#tweet-quote {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: opacity 0.3s ease;
+  text-decoration: none; 
+}
+
+button:hover,
+#tweet-quote:hover {
+  opacity: 0.85;
+}
+
+#new-quote {
+  background-color: #202326;
+  color: #80F29D
+}
+
+#tweet-quote {
+  background-color: #202326;
+  color: #80F29D
+}
+
+@media (max-width: 768px) {
+  #quote-box {
+    padding: 20px;
+    margin: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #text {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  button,
+  #tweet-quote {
+    width: 100%;
   }
 }
